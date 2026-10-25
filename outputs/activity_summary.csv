@@ -1,0 +1,7 @@
+Activity,Event_Count,Patients,Average_Interval_After_Minutes
+Discharge,100,100,26.85
+Doctor,113,100,26.01769911504425
+Laboratory,100,100,24.32
+Registration,100,100,
+Treatment,100,100,22.64
+Triage,100,100,23.91

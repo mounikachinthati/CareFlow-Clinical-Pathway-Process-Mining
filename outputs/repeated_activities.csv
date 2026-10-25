@@ -1,0 +1,14 @@
+Case_ID,Activity,Timestamp,Previous_Activity,Previous_Timestamp,Interval_Minutes,Activity_Visit_Number
+P001,Doctor,2026-10-01 14:41:00,Laboratory,2026-10-01 14:28:00,13.0,2
+P021,Doctor,2026-10-01 13:30:00,Laboratory,2026-10-01 13:22:00,8.0,2
+P025,Doctor,2026-10-01 11:42:00,Laboratory,2026-10-01 11:23:00,19.0,2
+P031,Doctor,2026-10-01 13:12:00,Laboratory,2026-10-01 12:39:00,33.0,2
+P037,Doctor,2026-10-01 16:57:00,Laboratory,2026-10-01 16:27:00,30.0,2
+P056,Doctor,2026-10-01 17:40:00,Laboratory,2026-10-01 17:19:00,21.0,2
+P065,Doctor,2026-10-01 12:11:00,Laboratory,2026-10-01 11:54:00,17.0,2
+P071,Doctor,2026-10-01 17:28:00,Laboratory,2026-10-01 17:08:00,20.0,2
+P074,Doctor,2026-10-01 15:24:00,Laboratory,2026-10-01 14:53:00,31.0,2
+P075,Doctor,2026-10-01 13:20:00,Laboratory,2026-10-01 13:14:00,6.0,2
+P083,Doctor,2026-10-01 11:30:00,Laboratory,2026-10-01 11:10:00,20.0,2
+P087,Doctor,2026-10-01 12:04:00,Laboratory,2026-10-01 11:23:00,41.0,2
+P096,Doctor,2026-10-01 16:17:00,Laboratory,2026-10-01 15:57:00,20.0,2
