@@ -1,0 +1,51 @@
+PatientID,Department,Pathway,LengthOfStay,IsCompliant,Readmitted30Days,Cost
+P001,General Medicine,Pneumonia Care Pathway,4.2,Yes,No,3500
+P002,Cardiology,Heart Failure Pathway,5.6,Yes,Yes,5200
+P003,Neurology,Stroke Care Pathway,6.7,No,No,6100
+P004,Orthopedics,Post-Surgical Care Pathway,4.8,Yes,No,4800
+P005,Oncology,Diabetes Care Pathway,4.1,Yes,No,4100
+P006,General Medicine,Pneumonia Care Pathway,3.5,Yes,No,3200
+P007,Cardiology,Heart Failure Pathway,6.2,No,Yes,5800
+P008,Neurology,Stroke Care Pathway,7.1,Yes,No,6500
+P009,Orthopedics,Post-Surgical Care Pathway,4.0,Yes,No,4500
+P010,Oncology,Diabetes Care Pathway,5.5,No,Yes,4900
+P011,General Medicine,Pneumonia Care Pathway,4.0,Yes,No,3600
+P012,Cardiology,Heart Failure Pathway,5.8,Yes,No,5300
+P013,Neurology,Stroke Care Pathway,6.0,Yes,No,6000
+P014,Orthopedics,Post-Surgical Care Pathway,5.1,No,Yes,5100
+P015,Oncology,Diabetes Care Pathway,4.3,Yes,No,4200
+P016,General Medicine,Pneumonia Care Pathway,3.9,Yes,No,3400
+P017,Cardiology,Heart Failure Pathway,5.5,Yes,No,5000
+P018,Neurology,Stroke Care Pathway,6.5,No,Yes,6200
+P019,Orthopedics,Post-Surgical Care Pathway,4.7,Yes,No,4700
+P020,Oncology,Diabetes Care Pathway,5.0,Yes,No,4800
+P021,General Medicine,Pneumonia Care Pathway,4.4,Yes,No,3700
+P022,Cardiology,Heart Failure Pathway,6.1,Yes,No,5500
+P023,Neurology,Stroke Care Pathway,6.9,No,No,6300
+P024,Orthopedics,Post-Surgical Care Pathway,5.3,Yes,Yes,5200
+P025,Oncology,Diabetes Care Pathway,4.6,Yes,No,4400
+P026,General Medicine,Pneumonia Care Pathway,3.8,Yes,No,3300
+P027,Cardiology,Heart Failure Pathway,5.9,Yes,No,5400
+P028,Neurology,Stroke Care Pathway,6.3,No,Yes,6100
+P029,Orthopedics,Post-Surgical Care Pathway,4.9,Yes,No,4900
+P030,Oncology,Diabetes Care Pathway,4.2,Yes,No,4300
+P031,General Medicine,Pneumonia Care Pathway,4.1,Yes,No,3500
+P032,Cardiology,Heart Failure Pathway,5.7,Yes,No,5200
+P033,Neurology,Stroke Care Pathway,6.8,No,No,6400
+P034,Orthopedics,Post-Surgical Care Pathway,5.0,Yes,Yes,5000
+P035,Oncology,Diabetes Care Pathway,4.5,Yes,No,4600
+P036,General Medicine,Pneumonia Care Pathway,3.7,Yes,No,3100
+P037,Cardiology,Heart Failure Pathway,5.4,No,Yes,5100
+P038,Neurology,Stroke Care Pathway,6.4,Yes,No,6200
+P039,Orthopedics,Post-Surgical Care Pathway,4.6,Yes,No,4600
+P040,Oncology,Diabetes Care Pathway,4.8,Yes,No,4700
+P041,General Medicine,Pneumonia Care Pathway,4.3,Yes,No,3800
+P042,Cardiology,Heart Failure Pathway,5.2,Yes,No,4900
+P043,Neurology,Stroke Care Pathway,6.6,No,Yes,6300
+P044,Orthopedics,Post-Surgical Care Pathway,4.5,Yes,No,4500
+P045,Oncology,Diabetes Care Pathway,4.9,Yes,No,4800
+P046,General Medicine,Pneumonia Care Pathway,3.6,Yes,No,3000
+P047,Cardiology,Heart Failure Pathway,5.3,Yes,No,5000
+P048,Neurology,Stroke Care Pathway,6.2,No,No,6000
+P049,Orthopedics,Post-Surgical Care Pathway,4.4,Yes,Yes,4400
+P050,Oncology,Diabetes Care Pathway,5.1,Yes,No,4900
