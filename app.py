@@ -1,9 +1,7 @@
 
 import streamlit as st
 import pandas as pd
-import requests
-
-API_URL = "http://127.0.0.1:8000"
+from pathlib import Path
 
 st.set_page_config(
     page_title="CareFlow Analytics",
@@ -12,68 +10,57 @@ st.set_page_config(
 )
 
 st.title("🏥 CareFlow — Clinical Pathway Analytics")
-st.caption("Patient journey and hospital process analysis")
+st.caption("Patient Journey and Hospital Process Analysis")
 
-try:
-    analytics = requests.get(
-        f"{API_URL}/analytics",
-        timeout=10
-    )
-    analytics.raise_for_status()
-    data = analytics.json()
+# Load project dataset directly
+BASE_DIR = Path(__file__).resolve().parent
+CSV_PATH = BASE_DIR / "data" / "patient_event_log.csv"
 
-    patients_response = requests.get(
-        f"{API_URL}/patients",
-        timeout=10
-    )
-    patients_response.raise_for_status()
-    patients = patients_response.json()["patients"]
+df = pd.read_csv(CSV_PATH)
+df["Timestamp"] = pd.to_datetime(df["Timestamp"])
 
-except requests.RequestException:
-    st.error("Cannot connect to CareFlow API. Start the FastAPI server first.")
-    st.stop()
+# Calculate KPIs
+total_patients = df["Case_ID"].nunique()
+total_events = len(df)
+total_activities = df["Activity"].nunique()
 
-# KPI Cards
 col1, col2, col3 = st.columns(3)
-
-col1.metric("Total Patients", data["total_patients"])
-col2.metric("Total Events", data["total_events"])
-col3.metric("Unique Activities", len(data["activity_summary"]))
+col1.metric("Total Patients", total_patients)
+col2.metric("Total Events", total_events)
+col3.metric("Unique Activities", total_activities)
 
 st.divider()
 
-# Activity Analysis
+# Activity analysis
 st.subheader("Patient Activity Analysis")
 
-activity_df = pd.DataFrame(data["activity_summary"])
+activity_summary = (
+    df["Activity"]
+    .value_counts()
+    .reset_index()
+)
+activity_summary.columns = ["Activity", "Frequency"]
 
 st.bar_chart(
-    activity_df.set_index("Activity")["frequency"],
-    color="#2196F3"
+    activity_summary.set_index("Activity")
 )
 
-# Patient Search
+# Patient journey explorer
 st.divider()
 st.subheader("Patient Journey Explorer")
+
+patients = sorted(df["Case_ID"].unique())
 
 selected_patient = st.selectbox(
     "Select Patient Case ID",
     patients
 )
 
-if selected_patient:
-    response = requests.get(
-        f"{API_URL}/patients/{selected_patient}",
-        timeout=10
-    )
+journey = df[df["Case_ID"] == selected_patient].sort_values("Timestamp")
 
-    if response.status_code == 200:
-        journey_df = pd.DataFrame(response.json())
+st.dataframe(journey, use_container_width=True)
 
-        st.write(f"Journey details for {selected_patient}")
-        st.dataframe(journey_df, use_container_width=True)
+st.subheader("Activity Sequence")
+st.write(" → ".join(journey["Activity"].tolist()))
 
-        st.write("Activity Sequence")
-        st.write(" → ".join(journey_df["Activity"].tolist()))
-
-st.success("CareFlow dashboard connected to the API.")
+st.success("CareFlow Analytics dashboard loaded successfully!")
