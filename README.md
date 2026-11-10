@@ -1,9 +1,7 @@
 # 🏥 CareFlow — Clinical Pathway Process Mining
 
 ## 🌐 Live Dashboard
-**[Open CareFlow Analytics Dashboard]https://careflow-clinical-pathway-process-minning.streamlit.app/
-**
-
+[Open CareFlow Analytics Dashboard](https://careflow-clinical-pathway-process-minning.streamlit.app/)
 ## 📌 Project Overview
 CareFlow is a Data Analytics project that analyzes synthetic hospital patient journey data to identify process patterns, repeated activities, and patient journey duration.
 
